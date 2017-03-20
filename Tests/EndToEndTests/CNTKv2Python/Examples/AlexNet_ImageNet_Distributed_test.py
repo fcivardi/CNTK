@@ -48,7 +48,7 @@ def test_alexnet_imagenet_distributed_1bitsgd(device_id):
     mpiexec_test(device_id, script_under_test, mpiexec_params, params, 0.99, True)
 
 # TODO Flaky on our linux machines?
-def disabled_test_alexnet_imagenet_distributed_block_momentum(device_id):
+def test_alexnet_imagenet_distributed_block_momentum(device_id):
     params = [ "-n", "2",
                "-m", "8",
                "-e", "16",
